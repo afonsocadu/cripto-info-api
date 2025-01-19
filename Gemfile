@@ -30,3 +30,6 @@ end
 gem "devise", "~> 4.9"
 gem 'rack-cors'
 gem 'devise_token_auth'
+gem 'dotenv-rails'
+gem 'attr_encrypted'
+gem 'byebug'

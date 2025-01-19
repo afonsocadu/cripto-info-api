@@ -8,5 +8,7 @@ class User < ApplicationRecord
          :validatable
 
   has_many :stored_infos
+
+
   include DeviseTokenAuth::Concerns::User
 end
