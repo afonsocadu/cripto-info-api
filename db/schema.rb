@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2025_01_11_010016) do
+ActiveRecord::Schema[7.1].define(version: 2025_01_12_234536) do
+  create_table "stored_infos", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.string "title"
+    t.text "encrypted_text"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_stored_infos_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "provider", default: "email", null: false
     t.string "uid", default: "", null: false
@@ -42,4 +51,5 @@ ActiveRecord::Schema[7.1].define(version: 2025_01_11_010016) do
     t.index ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true
   end
 
+  add_foreign_key "stored_infos", "users"
 end

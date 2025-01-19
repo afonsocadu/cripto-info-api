@@ -7,5 +7,6 @@ class User < ApplicationRecord
          :rememberable,
          :validatable
 
+  has_many :stored_infos
   include DeviseTokenAuth::Concerns::User
 end
