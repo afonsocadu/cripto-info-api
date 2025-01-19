@@ -80,6 +80,8 @@ GEM
       tzinfo (~> 2.0)
     addressable (2.8.7)
       public_suffix (>= 2.0.2, < 7.0)
+    attr_encrypted (4.1.1)
+      encryptor (~> 3.0.0)
     base64 (0.2.0)
     bcrypt (3.1.20)
     benchmark (0.4.0)
@@ -88,6 +90,7 @@ GEM
     bootsnap (1.18.4)
       msgpack (~> 1.2)
     builder (3.3.0)
+    byebug (11.1.3)
     capybara (3.40.0)
       addressable
       matrix
@@ -116,7 +119,12 @@ GEM
       bcrypt (~> 3.0)
       devise (> 3.5.2, < 5)
       rails (>= 4.2.0, < 8.1)
+    dotenv (3.1.7)
+    dotenv-rails (3.1.7)
+      dotenv (= 3.1.7)
+      railties (>= 6.1)
     drb (2.2.1)
+    encryptor (3.0.0)
     error_highlight (0.7.0)
     erubi (1.13.1)
     globalid (1.2.1)
@@ -299,11 +307,14 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
+  attr_encrypted
   bootsnap
+  byebug
   capybara
   debug
   devise (~> 4.9)
   devise_token_auth
+  dotenv-rails
   error_highlight (>= 0.4.0)
   importmap-rails
   jbuilder
